@@ -1,0 +1,37 @@
+ <!DOCTYPE html>  
+ <html>  
+ <body>  
+ <h1><center>Cadena</center></h1>  
+ <p><center>Por favor, introduce una cadena:</center></p>  <br>
+ <center><input id="num1"><br>   </center><br>
+ <center><button type="button" onclick="cadena()">Invertir</button> </center><br>
+ 
+ <p id="resultado"></p>  
+ <script type="text/javascript"> 
+ 
+ function stringInvertido(texto) {
+     return texto.split('').reverse().join('');
+} 
+ function cadena() 
+ {  
+   var x,text, hr, men; 
+   x = document.getElementById("num1").value;   
+   if (x=="") 
+   {  
+     text = "Es necesarios introducir un cadena valida";  
+   } 
+   else 
+   {
+		
+		   
+	   text="Cantidad de carcateres: "+x.length+"<br>cadena original: "+x+"<br>cadena invertida: "+stringInvertido(x);	  
+   }
+   document.getElementById("num1").value="";
+   document.getElementById("num1").focus();
+   document.getElementById("resultado").innerHTML = text;
+}
+ 
+   
+ </script>  
+ </body>  
+ </html> 

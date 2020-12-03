@@ -1,0 +1,57 @@
+ <!DOCTYPE html>  
+ <html>  
+ <body>  
+ <h1><center>Converiones</center></h1>  
+ <p><center>Por favor, introduce un monto:</center></p>  <br>
+ <center><input id="num1"></center><br><br>   
+ <center><button type="button" onclick="bs_a_dol()">Bolivianos a Dolares</button>
+  <button type="button" onclick="dol_a_bs()">Dolares a Bolivianos</button>
+  <button type="button" onclick="limpiar()">Limpiar Campo</button></center> 
+ 
+ <p id="resultado"></p>  
+ <script type="text/javascript">  
+ function bs_a_dol() 
+ {  
+   var x,y,suma,text;  
+   x = document.getElementById("num1").value;   
+   if (isNaN(x) || x=="") 
+   {  
+     text = "Es necesarios introducir dos números válidos";  
+   } 
+   else 
+   {
+	   text=x*6.88;	  
+   }
+   document.getElementById("num1").focus();
+   document.getElementById("resultado").innerHTML = text+" $us";
+}
+ 
+function dol_a_bs() 
+{  
+   var x,y,suma,text;  
+   x = document.getElementById("num1").value;   
+   if (isNaN(x) || x=="") 
+   {  
+     text = "Es necesarios introducir dos números válidos";  
+   } 
+   else 
+   {
+	   text=x/6.88;
+		  
+   }
+
+   document.getElementById("num1").focus();
+   document.getElementById("resultado").innerHTML = text+" Bs";   
+ }
+ 
+  function limpiar() 
+ {  
+
+   document.getElementById("num1").value="";
+   document.getElementById("num1").focus();
+   document.getElementById("resultado").innerHTML = "";
+}
+   
+ </script>  
+ </body>  
+ </html> 

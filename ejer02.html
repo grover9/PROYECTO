@@ -1,0 +1,31 @@
+ <!DOCTYPE html>  
+ <html>  
+ <body>  
+ <h1><center>Verifica</center></h1>  
+ <p><center>Por favor, introduce un numeros:</center></p>  
+ <center><input id="num1"></center><br>   
+ <center><button type="button" onclick="myFunction()">Verificar</button></center> 
+ <center><p id="resultado"></p> </center> 
+ <script>  
+ function myFunction() {  
+   var x,y,suma,text;  
+   x = document.getElementById("num1").value;   
+   if (isNaN(x) || x=="") 
+   {  
+     text = "Es necesarios introducir dos números válidos";  
+   } 
+   else 
+   {
+	   if(x>=1 && x<=50)
+	   		text= "El numero esta entre 1 y 50";
+	   else
+			text= "El numero no esta entre 1 y 50";
+		  
+   }
+   document.getElementById("num1").value="";
+   document.getElementById("num1").focus();
+   document.getElementById("resultado").innerHTML = text;  
+ }  
+ </script>  
+ </body>  
+ </html> 

@@ -1,0 +1,40 @@
+ <!DOCTYPE html>  
+ <html>  
+ <body>  
+ <h1><center>Saludo</center></h1>  
+ <p><center>Por favor, introduce su nombre:</center></p>  
+ <center><input id="num1"><br></center> <br>  
+ <center><button type="button" onclick="saludar(new Date())">Saludar</button></center> <br>
+ <p id="resultado"></p>  
+ <script type="text/javascript">  
+ function saludar(hora) 
+ {  
+   var x,text, hr, men;
+   hr=hora.getHours();  
+   x = document.getElementById("num1").value;   
+   if (x=="") 
+   {  
+     text = "Es necesarios introducir un nombre valido";  
+   } 
+   else 
+   {
+	   if(hr>=0 && hr<12)
+	   	men="Buenos dias, ";
+		
+	   if(hr>=12 && hr<19)
+	   	men="Buenas tades, ";
+	
+	   if(hr>=19 && hr<=23)
+	   	men="Buenas noches, ";	
+	   
+	   text=men+x;	  
+   }
+   document.getElementById("num1").value="";
+   document.getElementById("num1").focus();
+   document.getElementById("resultado").innerHTML = text;
+}
+ 
+   
+ </script>  
+ </body>  
+ </html> 

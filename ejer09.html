@@ -1,0 +1,20 @@
+ <!DOCTYPE html>  
+ <html>  
+ <body>  
+ <h1><center>Lanzamiento de un dado</center></h1>  
+ <p><center>Por favor, precione el boton:</center></p>    
+ <center><button type="button" onclick="generar()">Generar</button></center>  
+ <center><p id="res"></p> </center> 
+ <script>
+ function NumerosAleatorios(min, max) {
+   return Math.round(Math.random() * (max - min) + min);
+}
+   
+ function generar() 
+ {
+	x=NumerosAleatorios(1,6);   
+   document.getElementById("res").innerHTML = x;  
+ }  
+ </script>  
+ </body>  
+ </html> 

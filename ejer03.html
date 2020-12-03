@@ -1,0 +1,78 @@
+ <!DOCTYPE html>  
+ <html>  
+ <body>  
+ <h1><center>Tabla de Sumas, restas, mutiplicacion y division</center></h1>  
+ <p><center>Por favor, introduce un numeros:</center></p>  
+ <center><input id="num1"><br></center>   <br>
+ <center><button type="button" onclick="tabla(devuelve())">Generar Tabla</button></center> <br>
+ <center><p id="resultado"></p></center>
+ <script>  
+
+function devuelve()
+{
+	return document.getElementById("num1").value; 
+
+}
+
+function tabla(j)
+{
+	document.write("<h2>Tabla de suma del "+ j +"</h2>");
+
+	document.write("<ul>");
+	//i++ significa i=i+1;
+
+	for(i = 1;i<=10;i++){
+		document.write("<li>");
+		document.write(j + " + " + i + "= " + j + i);
+		document.write("</li>");
+	}
+
+	document.write("</ul>");
+
+
+	document.write("<h2>Tabla de resta del "+ j +"</h2>");
+
+	document.write("<ul>");
+	//i++ significa i=i+1;
+
+	for(i = 1;i<=10;i++){
+		document.write("<li>");
+		res=j-i;
+		document.write(j + " - " + i + "= " + res);
+		document.write("</li>");
+	}
+
+	document.write("</ul>");
+	
+	
+	document.write("<h2>Tabla de multiplicar del "+ j +"</h2>");
+
+	document.write("<ul>");
+	//i++ significa i=i+1;
+
+	for(i = 1;i<=10;i++){
+		document.write("<li>");
+		document.write(j + " x " + i + "= " + j * i);
+		document.write("</li>");
+	}
+
+	document.write("</ul>");
+	
+	document.write("<h2>Tabla de dividir del "+ j +"</h2>");
+
+	document.write("<ul>");
+	//i++ significa i=i+1;
+
+	for(i = 1;i<=10;i++){
+		document.write("<li>");
+		document.write(j + " / " + i + "= " + j / i);
+		document.write("</li>");
+	}
+
+	document.write("</ul>");
+}
+
+
+ </script>  
+ </body>  
+ </html> 
